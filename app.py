@@ -22,7 +22,7 @@ def date_to_julian_day(date: str) -> int:
     start_of_year = datetime(dt.year, 1, 1)
     return (dt - start_of_year).days + 1
 
-@app.route('/get_sismograma', methods=['GET'])
+@app.route('/generate_sismograma', methods=['GET'])
 def get_sismograma():
     try:
         start_date_input = request.args.get('start_date')
